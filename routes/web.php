@@ -50,3 +50,6 @@ Route::patch('/editEmpleado/{codigo_empleado}', [EmpleadoController::class, 'edi
 
 //Ruta para Eliminar
 Route::delete('/deleteEmpleado/{codigo_empleado}', [EmpleadoController::class,'destroy'])->name('deleteEmpleado');
+
+Route::get('/listaUsuarios', [EmpleadoController::class,'listaUsuarios']);
+

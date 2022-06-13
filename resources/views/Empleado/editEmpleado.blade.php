@@ -20,8 +20,10 @@
                 @endif
 
                 <div class="card border-primary">
-                    <form action="{{ route('editEmpleado', $empleado->codigo_empleado)}}" method="POST" enctype="multipart/form-data">
-                        @csrf @method('PATCH')
+                    <div class="card border-primary">
+                        <form action="{{ route('editEmpleado', $empleado->codigo_empleado)}}" method="POST" enctype="multipart/form-data">
+                            @csrf @method('PATCH')
+
 
                         <div class="card-header border-primary text-center text-white" style="background-color: #21618C;" >MODIFICAR EMPLEADO</div>
 
@@ -55,7 +57,7 @@
                                     <i class="fas fa-undo"> Modificar</i>
                                 </button>
 
-                                <a class="btn btn-outline-secondary col-md-9 offset-2 text-dark" href="{{url('$/listaEmpleado')}}" role="button">
+                                <a class="btn btn-outline-secondary col-md-9 offset-2 text-dark" href="{{url('/listaEmpleado')}}" role="button">
                                     <i class="far fa-hand-point-left"> Regresar</i>
                                 </a>
                             </div>

@@ -7,7 +7,7 @@
         <div class="row justify-content-center">
             <div class="cold-md-11">
                 <h1 class="text-center mb-5">
-                    <i class="fas fa-user-graduate"> Empleados Registrados</i>
+                    <i class="fa fa-users"> Empleados Registrados</i>
                 </h1>
 
                 <a class="btn btn-success mb-4" href="{{url('/formEmpleado')}}">
@@ -52,7 +52,7 @@
                                         @csrf @method('DELETE')
 
                                         <button type="submit" class="btn btn-danger">
-                                            <i class="fas fa-trash-alt">Agregar</i>
+                                            <i class="fas fa-trash-alt">Eliminar</i>
                                         </button>
 
                                     </form>

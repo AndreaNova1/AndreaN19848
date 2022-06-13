@@ -29,20 +29,29 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <ul class="nav nav-pills ml-auto flex justify-end">
-        <li class="nav-item">
-            <a class="btn btn-outline-primary offset-1 " id="pills-home-tab" role="tab" aria-controls="pills-home" aria-selected="true">Profesor</a>
-        </li>
-
-
-        <a class=" offset-5">
+    <ul>
+        <a class=" offset-7">
             <p class="text-xl ">Bienvenido: <b> {{auth()->user()->name}}</p>
         </a>
-        <a href="{{route('login.destroy')}}" class=" btn btn-outline-danger">
-            <i class="fa fa-sign-out"> Salir</i>
-        </a>
-
     </ul>
+    <a>
+        <ul class="w-1/2 px-16 ml-auto flex justify-end pt-2">
+
+            <a href="{{url('/listaUsuarios')}}"class="btn btn-outline-info">
+                <i class="fa fa-home"> Registro de Usuarios</i>
+            </a>
+
+            <a href="{{url('/listaEmpleado')}}"class="btn btn-outline-info">
+                <i class="fa fa-home"> Registro de Empleados</i>
+            </a>
+
+            <a href="{{route('login.destroy')}}" class=" btn btn-outline-danger">
+                <i class="fa fa-sign-out"> Salir</i>
+            </a>
+
+        </ul>
+
+    </a>
 </nav>
 <div class="container">
 @yield('content') <!--para navbar-->

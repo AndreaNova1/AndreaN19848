@@ -65,6 +65,7 @@ class EmpleadoController extends Controller
     //Formulario Editar
     public function editformEmpleado($codigo_empleado)
     {
+
         $empleado = empleado::findOrFail($codigo_empleado);
 
         return view('Empleado.editEmpleado', compact('empleado'));
@@ -93,5 +94,14 @@ class EmpleadoController extends Controller
 
             return redirect('/listaempleado')->with('alerta', 'ok');
         }
+    }
+    public function listaUsuarios(Request $request)
+    {
+        $users = DB::table('users')
+            ->select('users.*')
+            ->paginate(5);
+
+
+        return view('Usuarios.listaUsuarios', compact('users'));
     }
 }
