@@ -23,7 +23,6 @@
                         <th scope="col">Correo</th>
                         <th scope="col">Dirección</th>
                         <th scope="col">Departamento</th>
-                        <th scope="col">Registrado por:</th>
                         <th scope="col">Acciones</th>
                     </tr>
                     </thead>
@@ -38,7 +37,6 @@
                             <td>{{$empleados->correo}}</td>
                             <td>{{$empleados->direccion}}</td>
                             <td>{{$empleados->departamento}}</td>
-                            <td>{{$empleados->name}}</td>
 
                             <td>
 
